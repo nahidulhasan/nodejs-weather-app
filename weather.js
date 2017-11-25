@@ -9,7 +9,16 @@ function get(query) {
 
 	response => {
 
-		let body = ""
-	}
+		let body = "";
+
+		response.on('data', chunk =>{
+			body += chunk;
+		});
+
+		response.on('end', () => {
+
+			cosole.log(body);
+		});
+	};
 
 }
