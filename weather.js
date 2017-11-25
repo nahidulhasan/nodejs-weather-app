@@ -13,7 +13,10 @@ function printWeather(weather) {
 
 }
 
+function printError(error) {
 
+	console.error(error.message);
+}
 
 function get(query) {
 
