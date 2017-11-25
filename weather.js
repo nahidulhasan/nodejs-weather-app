@@ -7,7 +7,7 @@ const api = require('./api.json')
 
 function printWeather(weather) {
 
-  const message ='Current Temperature in ${weather.location.city} is ${weather.current_observation.temp_f} F';
+  const message ='Current Temperature in '+weather.location.city+' is '+weather.current_observation.temp_f+ ' F';
 
   console.log(message);
 
@@ -20,18 +20,22 @@ function printError(error) {
 
 function get(query) {
 
-	const readableQuery = query.replace('_', ' ')
+	const readableQuery = query.replace('_', ' ');
+
+	//console.log('https://api.wunderground.com/api/${api.key}/geolookup/conditions/q/${query}.json');
 
   try{
   	const request = 
-	https.get('https://api.wunderground.com/api/${api.key}/geolookup/conditions/q/${query}.json',
-	response => {
+	https.get('https://api.wunderground.com/api/ba20872b845c4b89/geolookup/conditions/q/IA/Cedar_Rapids.json',
+    response => {
 
-		if(response.statusCode === 200){
+		if(response.statusCode === 200){  
 
 			var body = "";
+
 			response.on('data', chunk => {
 				body += chunk;
+
 			} );
 
 			response.on('end', () => {
@@ -53,12 +57,13 @@ function get(query) {
 			});
   			
   		} else {
-  			const statusCodeError = new Error('There was an error getting the message for ${readableQuery}.(${http.STATUS_CODES[response.statusCode]})');
+  			const statusCodeError = 
+  			new Error('There was an error getting the message for ${readableQuery}.(${http.STATUS_CODES[response.statusCode]})');
 
   		}
 	});
 
-	request.on('error', 'printError');
+	request.on('error', printError);
 
   } catch (error){
   	printError(error);
