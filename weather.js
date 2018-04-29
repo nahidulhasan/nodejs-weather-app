@@ -2,6 +2,7 @@
 const api = require('./api.json');
 const request = require('request');
 
+
 function printWeather(weather) {
 
    let message =`Current Temperature in ${weather.name} is ${weather.main.temp} degrees Celsius`;
@@ -14,7 +15,7 @@ function printError(error) {
 	console.error(error.message);
 }
 
-function get(city){
+function get(city) {
 
 	const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api.key}`
 
@@ -27,9 +28,9 @@ function get(city){
 
 					const weather = JSON.parse(body);
 
-					if(weather.name){
+					if(weather.name) {
 						printWeather(weather);
-					}else{
+					} else {
 						const queryError = new Error(`The location ${city} was not found`);
 						printError(queryError);
 					}
@@ -47,7 +48,6 @@ function get(city){
 	  });
 
 	} catch(error) {
-
 		printError(error);
 	}
 }
