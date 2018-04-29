@@ -1,16 +1,12 @@
 
-const http = require('http');
-const https = require('https');
-const api = require('./api.json')
-
-
+const api = require('./api.json');
+const request = require('request');
 
 function printWeather(weather) {
 
-  const message ='Current Temperature in '+weather.location.city+' is '+weather.current_observation.temp_f+ ' F';
+   let message =`Current Temperature in ${weather.name} is ${weather.main.temp} degrees Celsius`;
 
-  console.log(message);
-
+   console.log(message);
 }
 
 function printError(error) {
@@ -18,58 +14,42 @@ function printError(error) {
 	console.error(error.message);
 }
 
-function get(query) {
+function get(city){
 
-	const readableQuery = query.replace('_', ' ');
+	const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api.key}`
 
-	//console.log('https://api.wunderground.com/api/${api.key}/geolookup/conditions/q/${query}.json');
+	try{
+		  request(url, function (error, response, body) {
 
-  try{
-  	const request = 
-	https.get('https://api.wunderground.com/api/ba20872b845c4b89/geolookup/conditions/q/IA/Cedar_Rapids.json',
-    response => {
-
-		if(response.statusCode === 200){  
-
-			var body = "";
-
-			response.on('data', chunk => {
-				body += chunk;
-
-			} );
-
-			response.on('end', () => {
+		  	if(response.statusCode === 200){  
 
 				try{
 
 					const weather = JSON.parse(body);
 
-					if(weather.location){
+					if(weather.name){
 						printWeather(weather);
 					}else{
-						const queryError = new Error('The location ${readableQuery} was not found');
+						const queryError = new Error(`The location ${city} was not found`);
+						printError(queryError);
 					}
 	                
 				} catch(error) {
 					printError(error);
 				}
-
-			});
   			
   		} else {
   			const statusCodeError = 
-  			new Error('There was an error getting the message for ${readableQuery}.(${http.STATUS_CODES[response.statusCode]})');
-
+  			new Error(`There was an error getting the message for ${city}(StatusCode ${response.statusCode})`);
+  			printError(statusCodeError);
   		}
-	});
+			 
+	  });
 
-	request.on('error', printError);
+	} catch(error) {
 
-  } catch (error){
-  	printError(error);
-  }
-	
-
+		printError(error);
+	}
 }
 
 module.exports.get = get;

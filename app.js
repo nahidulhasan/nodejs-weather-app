@@ -1,5 +1,7 @@
-const weather = require('./weather');
+ const weather = require('./weather');
 
-const query = process.argv.slice(2).join("-").replace('',"-");
+const argv = require('yargs').argv;
 
-weather.get(query);
+let city = argv.c || 'dhaka';
+
+weather.get(city);
