@@ -32,7 +32,7 @@ Current Temperature in Dhaka is 24.6°C
 
 ```
 
-If you want to specify specific city, then call in this way 
+If you want to specific city temperature, then call in this way 
 
 ``` js
 
