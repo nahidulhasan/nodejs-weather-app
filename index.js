@@ -1,13 +1,14 @@
 const api = require('./api.json');
 const axios = require('axios');
 
-const getWeather = async city => {
+const getWeather = async location => {
+    const city = location || 'dhaka';
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${api.key}`
 
     try {
         const response = await axios.get(url);
 
-        if(response.data.cod === 200){
+        if(response.status === 200){
             try{
                 if(response.data.name) {
                     return response.data;
@@ -20,7 +21,7 @@ const getWeather = async city => {
             }
         } else {
             const statusCodeError =
-                new Error(`There was an error getting the message for ${city}(StatusCode ${response.data.cod})`);
+                new Error(`There was an error getting the message for ${city}(StatusCode ${response.status})`);
             printError(statusCodeError);
         }
     } catch(error) {
@@ -30,9 +31,8 @@ const getWeather = async city => {
 
 if(require.main == module) {
     const argument = process.argv.slice(3).join(' ');
-    const city = argument || 'dhaka';
-
-    getWeather(city).then( val => {
+    
+    getWeather(argument).then( val => {
         printWeather(val);
     });
 }
