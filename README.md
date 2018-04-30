@@ -53,7 +53,7 @@ Current Temperature in New York is 7.82°C
 
 If you want to input from terminal, then call in this way
 
-```
+``` js
 var nodejsWeatherApp = require("nodejs-weather-app");
 
 
