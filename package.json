@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/nahidulhasan/nodejs-weather-app#readme",
   "dependencies": {
-    "request": "^2.85.0",
-    "yargs": "^11.0.0"
+    "request": "^2.85.0"
   }
 }
