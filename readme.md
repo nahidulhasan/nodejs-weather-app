@@ -23,7 +23,7 @@ nodejsWeatherApp.getWeather().then( val => {
 
 ```
 
-If you don't specify any city and run code, you will get dhaka city temperature.
+If you don't specify any city and run the code, you will get Dhaka city temperature.
 
 Output :
 
@@ -51,7 +51,7 @@ Current Temperature in New York is 7.82°C
 
 ```
 
-If you want to input from terminal, then call in this way
+If you want to give input from the terminal, then call this way
 
 ``` js
 var nodejsWeatherApp = require("nodejs-weather-app");
@@ -65,10 +65,10 @@ nodejsWeatherApp.getWeather(argument).then( val => {
 
 ```
 
-Suppose your file name is app.js and you want to get temperature of sydney.Run the command
+Suppose your file name is app.js and you want to get the temperature of Sydney.Run the command
 
 ```
-node app.js -c sydney
+node app.js -c Sydney
 
 ```
 
@@ -79,7 +79,7 @@ Current Temperature in Sydney is 14.8°C
 
 ```
 
-If you want to modify output in your own way then call this way
+If you want to modify the output in your own way then call this way
 
 ``` js
 
