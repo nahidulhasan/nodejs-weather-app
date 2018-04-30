@@ -1,8 +1,7 @@
 
+## Node Js Weather App
 
 [![npm version](https://badge.fury.io/js/nodejs-weather-app.svg)](https://badge.fury.io/js/nodejs-weather-app)
-
-## Node Js Weather App
 
 ### Installation
 
