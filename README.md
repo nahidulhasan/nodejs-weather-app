@@ -1,3 +1,7 @@
+
+
+[![npm version](https://badge.fury.io/js/nodejs-weather-app.svg)](https://badge.fury.io/js/nodejs-weather-app)
+
 ## Node Js Weather App
 
 ### Installation
@@ -76,7 +80,7 @@ Current Temperature in Sydney is 14.8°C
 
 ```
 
-If you want to modify out in your own way then call this way
+If you want to modify output in your own way then call this way
 
 ``` js
 
