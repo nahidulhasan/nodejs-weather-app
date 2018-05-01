@@ -3,7 +3,6 @@
 
 Node Js Weather app is a simple module for obtaining weather information
 
-[![npm version](https://badge.fury.io/js/nodejs-weather-app.svg)](https://badge.fury.io/js/nodejs-weather-app)
 
 ### Installation
 
@@ -98,6 +97,54 @@ function printWeather(weather) {
   }
 
 ```
+
+If you want to see weather info in details
+
+``` js
+
+  function printWeather(weather) {
+
+       console.log(weather);
+  }
+
+```
+
+Output :
+
+```
+{ coord: { lon: 85.17, lat: 26.67 },
+  weather:
+   [ { id: 803,
+       main: 'Clouds',
+       description: 'broken clouds',
+       icon: '04n' } ],
+  base: 'stations',
+  main:
+   { temp: 20.73,
+     pressure: 1016.99,
+     humidity: 92,
+     temp_min: 20.73,
+     temp_max: 20.73,
+     sea_level: 1023.25,
+     grnd_level: 1016.99 },
+  wind: { speed: 4.26, deg: 98.5038 },
+  clouds: { all: 68 },
+  dt: 1525197016,
+  sys:
+   { message: 0.002,
+     country: 'IN',
+     sunrise: 1525131665,
+     sunset: 1525179120 },
+  id: 1273043,
+  name: 'Dhaka',
+  cod: 200 }
+
+
+```
+
+
+
+
 
 
 ### License
