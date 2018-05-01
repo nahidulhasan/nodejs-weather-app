@@ -1,6 +1,8 @@
 
 ## Node Js Weather App
 
+Node Js Weather app is a simple module for obtaining weather information
+
 [![npm version](https://badge.fury.io/js/nodejs-weather-app.svg)](https://badge.fury.io/js/nodejs-weather-app)
 
 ### Installation
