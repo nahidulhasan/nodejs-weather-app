@@ -103,7 +103,6 @@ If you want to see weather info in details
 ``` js
 
   function printWeather(weather) {
-
        console.log(weather);
   }
 
@@ -139,12 +138,7 @@ Output :
   name: 'Dhaka',
   cod: 200 }
 
-
 ```
-
-
-
-
 
 
 ### License
