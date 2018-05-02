@@ -1,7 +1,7 @@
 
 ## Node Js Weather App
 
-[![npm version](https://badge.fury.io/js/nodejs-weather-app.svg)](https://badge.fury.io/js/nodejs-weather-app)![npm](https://img.shields.io/npm/l/express.svg)[![Twitter](https://img.shields.io/twitter/url/https/github.com/nahidulhasan/nodejs-weather-app.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fnahidulhasan%2Fnodejs-weather-app)
+[![npm version](https://badge.fury.io/js/nodejs-weather-app.svg)](https://badge.fury.io/js/nodejs-weather-app) ![npm](https://img.shields.io/npm/l/express.svg) [![Twitter](https://img.shields.io/twitter/url/https/github.com/nahidulhasan/nodejs-weather-app.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fnahidulhasan%2Fnodejs-weather-app)
 
 
 
