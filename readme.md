@@ -1,6 +1,11 @@
 
 ## Node Js Weather App
 
+[![npm version](https://badge.fury.io/js/nodejs-weather-app.svg)](https://badge.fury.io/js/nodejs-weather-app)
+
+![npm](https://img.shields.io/npm/l/express.svg)
+
+
 Node Js Weather app is a simple module for obtaining weather information
 
 
@@ -8,7 +13,6 @@ Node Js Weather app is a simple module for obtaining weather information
 
 ```
 npm install nodejs-weather-app
-
 ```
 
 
@@ -30,7 +34,6 @@ Output :
 
 ```
 Current Temperature in Dhaka is 24.6°C
-
 ```
 
 If you want to specific city temperature, then call in this way 
@@ -49,7 +52,6 @@ Output :
 
 ```
 Current Temperature in New York is 7.82°C
-
 ```
 
 If you want to give input from the terminal, then call this way
@@ -70,14 +72,12 @@ Suppose your file name is app.js and you want to get the temperature of Sydney.R
 
 ```
 node app.js -c Sydney
-
 ```
 
 Output:
 
 ``` 
 Current Temperature in Sydney is 14.8°C
-
 ```
 
 If you want to modify the output in your own way then call this way
