@@ -1,8 +1,7 @@
 {
 	"name": "nodejs-weather-app",
-	"version": "1.5.2",
-	"description":
-		"Node Js Weather App is a simple module for obtaining weather information",
+	"version": "1.6.0",
+	"description": "Node Js Weather App is a simple module for obtaining weather information",
 	"main": "index.js",
 	"scripts": {
 		"test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
@@ -11,7 +10,11 @@
 		"type": "git",
 		"url": "git+https://github.com/nahidulhasan/nodejs-weather-app.git"
 	},
-	"keywords": ["nodejs", "javascript", "weather"],
+	"keywords": [
+		"nodejs",
+		"javascript",
+		"weather"
+	],
 	"author": "Nahidul Hasan <nahidul.cse@gmail.com>",
 	"license": "MIT",
 	"bugs": {
