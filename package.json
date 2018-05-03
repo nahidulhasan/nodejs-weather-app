@@ -20,5 +20,8 @@
 	"homepage": "https://github.com/nahidulhasan/nodejs-weather-app#readme",
 	"dependencies": {
 		"axios": "^0.18.0"
+	},
+	"bin": {
+		"weather": "index.js"
 	}
 }

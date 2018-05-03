@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const api = require('./api.json');
 const axios = require('axios');
 
