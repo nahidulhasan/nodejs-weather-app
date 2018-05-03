@@ -2,7 +2,7 @@
 	"name": "nodejs-weather-app",
 	"version": "1.5.2",
 	"description":
-		"Node Js Weather app is a simple module for obtaining weather information",
+		"Node Js Weather App is a simple module for obtaining weather information",
 	"main": "index.js",
 	"scripts": {
 		"test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
