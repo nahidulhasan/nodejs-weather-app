@@ -1,12 +1,8 @@
-
 ## Node Js Weather App
 
 [![npm version](https://badge.fury.io/js/nodejs-weather-app.svg)](https://badge.fury.io/js/nodejs-weather-app) ![npm](https://img.shields.io/npm/l/express.svg) [![Twitter](https://img.shields.io/twitter/url/https/github.com/nahidulhasan/nodejs-weather-app.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fnahidulhasan%2Fnodejs-weather-app)
 
-
-
 Node Js Weather App is a simple module for obtaining weather information
-
 
 ### Installation
 
@@ -14,17 +10,14 @@ Node Js Weather App is a simple module for obtaining weather information
 npm install nodejs-weather-app
 ```
 
-
 ### Usage
 
-``` js
+```js
+var nodejsWeatherApp = require('nodejs-weather-app');
 
-var nodejsWeatherApp = require("nodejs-weather-app");
-
-nodejsWeatherApp.getWeather().then( val => {
-       nodejsWeatherApp.printWeather(val);
-   });
-
+nodejsWeatherApp.getWeather().then(val => {
+	nodejsWeatherApp.printWeather(val);
+});
 ```
 
 If you don't specify any city and run the code, you will get Dhaka city temperature.
@@ -35,16 +28,14 @@ Output :
 Current Temperature in Dhaka is 24.6°C
 ```
 
-If you want to get specific city temperature, then call in this way 
+If you want to get specific city temperature, then call in this way
 
-``` js
+```js
+var nodejsWeatherApp = require('nodejs-weather-app');
 
-var nodejsWeatherApp = require("nodejs-weather-app");
-
-nodejsWeatherApp.getWeather('New York').then( val => {
-       nodejsWeatherApp.printWeather(val);
-   });
-
+nodejsWeatherApp.getWeather('New York').then(val => {
+	nodejsWeatherApp.printWeather(val);
+});
 ```
 
 Output :
@@ -55,16 +46,14 @@ Current Temperature in New York is 7.82°C
 
 If you want to give input from the terminal, then call this way
 
-``` js
-var nodejsWeatherApp = require("nodejs-weather-app");
-
+```js
+var nodejsWeatherApp = require('nodejs-weather-app');
 
 const argument = process.argv.slice(3).join(' ');
 
-nodejsWeatherApp.getWeather(argument).then( val => {
-       nodejsWeatherApp.printWeather(val);
-   });
-
+nodejsWeatherApp.getWeather(argument).then(val => {
+	nodejsWeatherApp.printWeather(val);
+});
 ```
 
 Suppose your file name is app.js and you want to get the temperature of Sydney.Run the command
@@ -75,36 +64,32 @@ node app.js -c Sydney
 
 Output:
 
-``` 
+```
 Current Temperature in Sydney is 14.8°C
 ```
 
 If you want to modify the output in your own way then call this way
 
-``` js
+```js
+var nodejsWeatherApp = require('nodejs-weather-app');
 
-var nodejsWeatherApp = require("nodejs-weather-app");
-
-nodejsWeatherApp.getWeather().then( val => {
-       printWeather(val);
-   });
+nodejsWeatherApp.getWeather().then(val => {
+	printWeather(val);
+});
 
 function printWeather(weather) {
-       let message =`Temperature in ${weather.name} is ${weather.main.temp}°C`;
+	let message = `Temperature in ${weather.name} is ${weather.main.temp}°C`;
 
-       console.log(message);
-  }
-
+	console.log(message);
+}
 ```
 
 If you want to see weather info in details
 
-``` js
-
-  function printWeather(weather) {
-       console.log(weather);
-  }
-
+```js
+function printWeather(weather) {
+	console.log(weather);
+}
 ```
 
 Output :
