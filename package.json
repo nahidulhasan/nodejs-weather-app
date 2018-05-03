@@ -1,6 +1,6 @@
 {
 	"name": "nodejs-weather-app",
-	"version": "1.6.0",
+	"version": "1.7.0",
 	"description": "Node Js Weather App is a simple module for obtaining weather information",
 	"main": "index.js",
 	"scripts": {
