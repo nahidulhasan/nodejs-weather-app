@@ -1,27 +1,32 @@
 {
-  "name": "nodejs-weather-app",
-  "version": "1.6.0",
-  "description": "Node Js Weather app is a simple module for obtaining weather information",
-  "main": "index.js",
-  "scripts": {
-    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nahidulhasan/nodejs-weather-app.git"
-  },
-  "keywords": [
-    "nodejs",
-    "javascript",
-    "weather"
-  ],
-  "author": "Nahidul Hasan <nahidul.cse@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nahidulhasan/nodejs-weather-app/issues"
-  },
-  "homepage": "https://github.com/nahidulhasan/nodejs-weather-app#readme",
-  "dependencies": {
-    "axios": "^0.18.0"
-  }
+
+	"name": "nodejs-weather-app",
+	"version": "1.8.0",
+	"description": "Node Js Weather App is a simple module for obtaining weather information",
+	"main": "index.js",
+	"scripts": {
+		"test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nahidulhasan/nodejs-weather-app.git"
+	},
+	"keywords": [
+		"nodejs",
+		"javascript",
+		"weather"
+	],
+	"author": "Nahidul Hasan <nahidul.cse@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/nahidulhasan/nodejs-weather-app/issues"
+	},
+	"homepage": "https://github.com/nahidulhasan/nodejs-weather-app#readme",
+	"dependencies": {
+		"axios": "^0.18.0"
+	},
+	"bin": {
+		"weather": "index.js"
+	}
+	
 }
