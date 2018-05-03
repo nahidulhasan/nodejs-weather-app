@@ -5,7 +5,7 @@
 
 
 
-Node Js Weather app is a simple module for obtaining weather information
+Node Js Weather App is a simple module for obtaining weather information
 
 
 ### Installation
@@ -35,7 +35,7 @@ Output :
 Current Temperature in Dhaka is 24.6°C
 ```
 
-If you want to specific city temperature, then call in this way 
+If you want to get specific city temperature, then call in this way 
 
 ``` js
 
